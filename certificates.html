@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Certificates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-green-400">
+    <header class="p-4 bg-gray-900 shadow-md flex justify-between items-center">
+      <h1 class="text-xl font-bold text-green-400">Regi Ridwan</h1>
+      <nav>
+        <a href="index.html" class="mx-2 hover:text-green-500">Home</a>
+        <a href="about.html" class="mx-2 hover:text-green-500">About</a>
+        <a href="portfolio.html" class="mx-2 hover:text-green-500">Portfolio</a>
+        <a href="certificates.html" class="mx-2 hover:text-green-500"
+          >Sertifikat</a
+        >
+        <a href="contact.html" class="mx-2 hover:text-green-500">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="bg-black py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl font-bold text-green-400 mb-12 text-center">
+            Sertifikat Saya
+          </h2>
+
+          <div
+            class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-20"
+          >
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal('images/certificates/KP.jpg', 'Magang Web Developer')
+              "
+            >
+              <img
+                src="images/certificates/KP.jpg"
+                alt="Magang Web Developer"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Magang Web Developer
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/CyberSAFECBS-410.jpg',
+                  'CyberSAFE CBS-410',
+                )
+              "
+            >
+              <img
+                src="images/certificates/CyberSAFECBS-410.jpg"
+                alt="CyberSAFE CBS-410"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                CyberSAFE CBS-410
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal('images/certificates/SERTIFIKAT MSIB.jpg', 'MSIB')
+              "
+            >
+              <img
+                src="images/certificates/SERTIFIKAT MSIB.jpg"
+                alt="MSIB"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                MSIB
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Sertifikat_Bisa Ai.jpg',
+                  'Bisa AI',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Sertifikat_Bisa Ai.jpg"
+                alt="Bisa AI"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Bisa AI
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Pelatihan Modern Ent-to-End Deep Learning Deplopmen and deploymen in Clude Producrion.jpg',
+                  'Pelatihan Deep Learning',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Pelatihan Modern Ent-to-End Deep Learning Deplopmen and deploymen in Clude Producrion.jpg"
+                alt="Pelatihan Deep Learning"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Pelatihan Deep Learning
+              </h3>
+            </div>
+          </div>
+
+          <h2 class="text-4xl font-bold text-green-400 mb-12 text-center">
+            Sertifikat Course
+          </h2>
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Bahasa-Pemrograman-Go.png',
+                  'Bahasa Pemrograman Go',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Bahasa-Pemrograman-Go.png"
+                alt="Bahasa Pemrograman Go"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Bahasa Pemrograman Go
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Basic Cyber Scurity.png',
+                  'Basic Cyber Security',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Basic Cyber Scurity.png"
+                alt="Basic Cyber Security"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Basic Cyber Security
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Cloud-Computing.png',
+                  'Cloud Computing',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Cloud-Computing.png"
+                alt="Cloud Computing"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Cloud Computing
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Cyber Scurity.png',
+                  'Cyber Security',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Cyber Scurity.png"
+                alt="Cyber Security"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Cyber Security
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Dasar Codeigniter 3.png',
+                  'Dasar Codeigniter 3',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Dasar Codeigniter 3.png"
+                alt="Dasar Codeigniter 3"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Dasar Codeigniter 3
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Dasar Dasar ReactJS.png',
+                  'Dasar ReactJS',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Dasar Dasar ReactJS.png"
+                alt="Dasar ReactJS"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Dasar ReactJS
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Dasar Internet Of Things dan pengamanannya.png',
+                  'Dasar IoT dan Pengamanan',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Dasar Internet Of Things dan pengamanannya.png"
+                alt="Dasar IoT"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Dasar IoT & Pengamanan
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Dasar-Dasar-Python.png',
+                  'Dasar Python',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Dasar-Dasar-Python.png"
+                alt="Dasar Python"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Dasar Python
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Deeplearning.png',
+                  'Deep Learning',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Deeplearning.png"
+                alt="Deep Learning"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Deep Learning
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/DevOps Backend .png',
+                  'DevOps Backend',
+                )
+              "
+            >
+              <img
+                src="images/certificates/DevOps Backend .png"
+                alt="DevOps Backend"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                DevOps Backend
+              </h3>
+            </div>
+
+            <div
+              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Information Retrieval for Biginer.png',
+                  'Information Retrieval for Beginner',
+                )
+              "
+            >
+              <img
+                src="images/certificates/Information Retrieval for Biginer.png"
+                alt="Information Retrieval"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-lg font-semibold text-green-400 text-center">
+                Information Retrieval
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="imageModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+    >
+      <div class="relative">
+        <button
+          onclick="closeModal()"
+          class="absolute top-2 right-2 text-white text-3xl font-bold"
+        >
+          &times;
+        </button>
+        <img
+          id="modalImage"
+          src=""
+          alt=""
+          class="max-h-[80vh] max-w-[90vw] rounded-lg shadow-2xl"
+        />
+        <p id="modalTitle" class="text-center text-green-400 mt-4 text-lg"></p>
+      </div>
+    </div>
+
+    <footer class="bg-gray-900 text-center py-6 text-green-400">
+      © 2026 Regi Ridwan. All rights reserved.
+    </footer>
+
+    <script>
+      function openModal(src, title) {
+        document.getElementById("modalImage").src = src;
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("imageModal").classList.remove("hidden");
+      }
+      function closeModal() {
+        document.getElementById("imageModal").classList.add("hidden");
+      }
+      document
+        .getElementById("imageModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeModal();
+        });
+    </script>
+  </body>
+</html>
