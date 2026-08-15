@@ -1,202 +1,616 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio - About</title>
+    <title>About — Regi Ridwan Gunawan</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["'Plus Jakarta Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="bg-black text-green-400">
-    <header class="p-4 bg-gray-900 shadow-md flex justify-between items-center">
-      <h1 class="text-xl font-bold text-green-400">Regi Ridwan</h1>
-      <nav>
-        <a href="index.html" class="mx-2 hover:text-green-500">Home</a>
-        <a href="about.html" class="mx-2 hover:text-green-500">About</a>
-        <a href="portfolio.html" class="mx-2 hover:text-green-500">Portfolio</a>
-        <a href="certificates.html" class="mx-2 hover:text-green-500"
-          >Sertifikat</a
+  <body
+    class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-400"
+  >
+    <!-- Ambient Background Glow -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+      <div
+        class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px]"
+      ></div>
+      <div
+        class="absolute top-[50%] left-[-10%] w-[500px] h-[500px] bg-teal-600/5 rounded-full blur-[130px]"
+      ></div>
+    </div>
+
+    <!-- Header / Navbar with Mobile Hamburger -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
+      >
+        <!-- Brand / Logo -->
+        <a
+          href="index.html"
+          class="text-lg font-bold tracking-tight text-white flex items-center gap-2"
         >
-        <a href="contact.html" class="mx-2 hover:text-green-500">Contact</a>
-      </nav>
+          <span
+            class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"
+          ></span>
+          Regi Ridwan<span class="text-emerald-400">.</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-400"
+        >
+          <a href="index.html" class="hover:text-emerald-400 transition-colors"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-white hover:text-emerald-400 transition-colors"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="hover:text-emerald-400 transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="certificates.html"
+            class="hover:text-emerald-400 transition-colors"
+            >Sertifikat</a
+          >
+          <a
+            href="contact.html"
+            class="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-emerald-500/40 text-zinc-200 hover:text-white transition-all"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          id="menuToggle"
+          aria-label="Toggle Mobile Menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 focus:outline-none transition-all"
+        >
+          <!-- Hamburger Icon -->
+          <svg
+            id="hamburgerIcon"
+            class="w-5 h-5 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+          <!-- Close Icon (Hidden by default) -->
+          <svg
+            id="closeIcon"
+            class="w-5 h-5 hidden transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-zinc-800/80 bg-zinc-950/95 backdrop-blur-xl px-6 py-5 transition-all duration-300"
+      >
+        <nav
+          class="flex flex-col space-y-3.5 text-sm font-medium text-zinc-300"
+        >
+          <a
+            href="index.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="px-3 py-2 rounded-lg bg-zinc-900/60 text-emerald-400 transition-all"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Portfolio</a
+          >
+          <a
+            href="certificates.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Sertifikat</a
+          >
+          <a
+            href="contact.html"
+            class="px-3 py-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold text-center hover:bg-emerald-500 hover:text-zinc-950 transition-all mt-2"
+          >
+            Hubungi Saya
+          </a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section class="py-20 bg-gray-900">
-        <div class="max-w-5xl mx-auto text-center">
-          <h2 class="text-4xl font-bold mb-12 text-green-400">About Me</h2>
-
-          <p class="mb-12 text-lg text-white leading-relaxed">
-            Mahasiswa S1 Teknik Informatika dengan minat besar dalam
-            pengembangan aplikasi web, termasuk pengalaman magang dalam
-            membangun sistem manajemen back-office System terintegrasi. Terbiasa
-            menggunakan
-            <span class="text-green-400">HTML, CSS, JavaScript</span>, serta
-            framework
-            <span class="text-green-400">React, Laravel, dan CodeIgniter</span>.
-            Memiliki pengalaman praktis dalam mengintegrasikan fitur kecerdasan
-            buatan (AI) untuk analisis data selama masa magang. Pernah mengikuti
-            studi independen di bidang
-            <span class="text-green-400">Cyber Security</span> dengan
-            pembelajaran teori dan praktik. Terbuka terhadap feedback, cepat
-            beradaptasi, dan antusias untuk terus belajar teknologi baru.
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-            <div
-              class="bg-black border border-green-500 p-6 rounded-lg shadow hover:shadow-lg transition"
+    <!-- Main Content -->
+    <main class="py-16 md:py-20">
+      <section class="max-w-5xl mx-auto px-6">
+        <!-- Header Section -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            Profile & Qualifications
+          </div>
+          <h1
+            class="text-3xl md:text-5xl font-extrabold text-white tracking-tight"
+          >
+            Tentang
+            <span
+              class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent"
+              >Saya</span
             >
-              <h3 class="text-2xl font-semibold mb-6 text-green-400">Skills</h3>
+          </h1>
+          <p class="text-zinc-400 text-base md:text-lg leading-relaxed pt-2">
+            Lulusan baru (Fresh Graduate) S1 Teknik Informatika dengan fokus
+            pada pengembangan aplikasi web, integrasi API, dan sistem manajemen
+            cerdas. Memiliki pengalaman praktis dalam merancang sistem
+            back-office terintegrasi dengan pemanfaatan AI, serta pemahaman
+            mendalam tentang standar keamanan sistem dan arsitektur data modern.
+          </p>
+        </div>
 
-              <div class="mb-6">
-                <h4
-                  class="text-lg font-bold text-white mb-2 border-b border-green-900 pb-1"
+        <!-- Grid: Skills vs Education & Experience -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Card Kiri: Skills -->
+          <div
+            class="bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-7 shadow-xl space-y-8"
+          >
+            <div class="flex items-center gap-3 border-b border-zinc-800 pb-4">
+              <div
+                class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  Keterampilan Teknis (Hard Skills)
-                </h4>
-                <ul class="list-disc pl-5 text-white space-y-1 text-sm">
-                  <li>
-                    <span class="text-green-400 font-semibold"
-                      >Programming Languages:</span
-                    >
-                    PHP, JavaScript, SQL, Python, Java, C, C++, HTML, CSS.
-                  </li>
-                  <li>
-                    <span class="text-green-400 font-semibold"
-                      >Framework & Library:</span
-                    >
-                    Laravel 12, React, CodeIgniter.
-                  </li>
-                  <li>
-                    <span class="text-green-400 font-semibold">Database:</span>
-                    MySQL.
-                  </li>
-                  <li>
-                    <span class="text-green-400 font-semibold"
-                      >Tools & Design:</span
-                    >
-                    Git, Figma, Docker, Canva, Blender (Basic).
-                  </li>
-                  <li>
-                    <span class="text-green-400 font-semibold">Other:</span>
-                    Scratch, Microsoft Office, Windows OS.
-                  </li>
-                </ul>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  />
+                </svg>
               </div>
+              <h2 class="text-xl font-bold text-white tracking-tight">
+                Keahlian & Kompetensi
+              </h2>
+            </div>
 
-              <div>
-                <h4
-                  class="text-lg font-bold text-white mb-2 border-b border-green-900 pb-1"
-                >
-                  Keterampilan Interpersonal (Soft Skills)
-                </h4>
-                <ul class="list-disc pl-5 text-white space-y-2 text-sm">
-                  <li>
-                    <span class="text-green-400 font-semibold"
-                      >Project Workflow Management:</span
+            <!-- Hard Skills -->
+            <div class="space-y-4">
+              <h3
+                class="text-sm font-semibold text-emerald-400 uppercase tracking-wider"
+              >
+                Keterampilan Teknis (Hard Skills)
+              </h3>
+
+              <div class="space-y-3 text-sm">
+                <div>
+                  <span class="text-zinc-200 font-medium block mb-1.5"
+                    >Programming Languages</span
+                  >
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >PHP</span
                     >
-                    Mampu merancang alur kerja sistem dari tahap analisis
-                    masalah hingga implementasi.
-                  </li>
-                  <li>
-                    <span class="text-green-400 font-semibold"
-                      >Decision Making:</span
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >JavaScript</span
                     >
-                    Tepat dalam pemilihan tech stack dan integrasi fitur cerdas
-                    sesuai kebutuhan bisnis.
-                  </li>
-                  <li>
-                    <span class="text-green-400 font-semibold"
-                      >Analytical Problem Solving:</span
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >SQL</span
                     >
-                    Handal dalam pemecahan logika pemrograman dan optimasi
-                    performa sistem.
-                  </li>
-                  <li>
-                    <span class="text-green-400 font-semibold"
-                      >Adaptive & Collaborative:</span
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >Python</span
                     >
-                    Cepat menguasai teknologi baru dan efektif bekerja dalam
-                    tim.
-                  </li>
-                </ul>
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >Java</span
+                    >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >C / C++</span
+                    >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >HTML5 & CSS3</span
+                    >
+                  </div>
+                </div>
+
+                <div>
+                  <span class="text-zinc-200 font-medium block mb-1.5"
+                    >Frameworks & Database</span
+                  >
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >Laravel 12</span
+                    >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >React</span
+                    >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >CodeIgniter</span
+                    >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >MySQL</span
+                    >
+                  </div>
+                </div>
+
+                <div>
+                  <span class="text-zinc-200 font-medium block mb-1.5"
+                    >Tools & Platforms</span
+                  >
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >Git & GitHub</span
+                    >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >Docker</span
+                    >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >Figma</span
+                    >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-zinc-800/80 text-zinc-300 text-xs border border-zinc-700/50"
+                      >Canva</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div
-              class="bg-black border border-green-500 p-6 rounded-lg shadow hover:shadow-lg transition"
-            >
-              <h3 class="text-2xl font-semibold mb-4 text-green-400">
-                Education
+            <!-- Soft Skills -->
+            <div class="space-y-3 pt-2">
+              <h3
+                class="text-sm font-semibold text-emerald-400 uppercase tracking-wider"
+              >
+                Keterampilan Interpersonal (Soft Skills)
               </h3>
-              <p class="text-white">
-                <span class="font-semibold">Universitas Islam Nusantara</span
-                ><br />
-                S1 Teknik Informatika (2022)<br />
-                IPK: 3.79 / 4.00
-              </p>
-
-              <h3 class="text-2xl font-semibold mt-6 mb-4 text-green-400">
-                Experience
-              </h3>
-              <ul class="list-disc pl-5 text-white space-y-4">
-                <li>
-                  <span class="font-semibold"
-                    >Web Developer Intern – PT Air Consulting Group</span
-                  >
-                  <br />(Sep - Des 2025)<br />
-                  Membangun sistem support customer service dengan integrasi
-                  Artificial Intelligence untuk fitur deteksi risiko pembayaran
-                  dan analisis sentimen.
+              <ul class="space-y-2.5 text-xs md:text-sm text-zinc-400">
+                <li class="flex items-start gap-2.5">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0"
+                  ></span>
+                  <span>
+                    <strong class="text-zinc-200"
+                      >Project Workflow Management:</strong
+                    >
+                    Merancang dan mengeksekusi sistem dari fase requirement
+                    analysis hingga deployment.
+                  </span>
                 </li>
-                <li>
-                  <span class="font-semibold"
-                    >Trainer Coding – AfterSchola</span
-                  >
-                  <br />(2025)<br />
-                  Mengajar dasar-dasar pemrograman dengan Scratch & proyek
-                  interaktif.
+                <li class="flex items-start gap-2.5">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0"
+                  ></span>
+                  <span>
+                    <strong class="text-zinc-200"
+                      >Analytical & Problem Solving:</strong
+                    >
+                    Kuat dalam logika algoritma, debugging, serta optimasi
+                    efisiensi komputasi.
+                  </span>
                 </li>
-                <li>
-                  <span class="font-semibold"
-                    >Studi Independen MSIB Batch 7 – Bisa AI</span
-                  >
-                  <br />(Sep - Des 2024)<br />
-                  Program Cyber Security, Cloud Computing, Fullstack, DevOps,
-                  IoT.
+                <li class="flex items-start gap-2.5">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0"
+                  ></span>
+                  <span>
+                    <strong class="text-zinc-200"
+                      >Adaptive & Collaborative:</strong
+                    >
+                    Cepat beradaptasi dengan stack baru dan efektif
+                    berkolaborasi lintas tim.
+                  </span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div
-            class="bg-black border border-green-500 p-6 rounded-lg shadow hover:shadow-lg transition mt-10 text-left"
-          >
-            <h3 class="text-2xl font-semibold mb-4 text-green-400">
-              Organizational Experience
-            </h3>
-            <ul class="list-disc pl-5 text-white space-y-2">
-              <li>
-                <span class="font-semibold">Ketua Angkatan Paskibra</span> (2019
-                - 2020)
-              </li>
-              <li>
-                <span class="font-semibold">Ketua Umum Paskibra</span> (2020 -
-                2021)
-              </li>
-              <li>
-                <span class="font-semibold"
-                  >Anggota Majelis Perwakilan Kelas (MPK)</span
+          <!-- Card Kanan: Education & Professional Experience -->
+          <div class="space-y-8">
+            <!-- Education Box -->
+            <div
+              class="bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-7 shadow-xl"
+            >
+              <div
+                class="flex items-center gap-3 border-b border-zinc-800 pb-4 mb-4"
+              >
+                <div
+                  class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"
                 >
-                – SMA PGRI 31 Pangalengan (2019 - 2020)
-              </li>
-            </ul>
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    />
+                  </svg>
+                </div>
+                <h2 class="text-xl font-bold text-white tracking-tight">
+                  Pendidikan
+                </h2>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-base font-bold text-zinc-100">
+                    Universitas Islam Nusantara
+                  </h3>
+                  <p class="text-sm text-emerald-400 font-medium">
+                    S1 Teknik Informatika (Sarjana Komputer)
+                  </p>
+                </div>
+                <div class="text-right">
+                  <span
+                    class="inline-block px-2.5 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-bold"
+                  >
+                    IPK: 3.83 / 4.00
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Box -->
+            <div
+              class="bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-7 shadow-xl"
+            >
+              <div
+                class="flex items-center gap-3 border-b border-zinc-800 pb-4 mb-6"
+              >
+                <div
+                  class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h2 class="text-xl font-bold text-white tracking-tight">
+                  Pengalaman Kerja & Studi
+                </h2>
+              </div>
+
+              <div class="space-y-6">
+                <!-- Item 1 -->
+                <div
+                  class="relative pl-5 border-l-2 border-zinc-800 hover:border-emerald-500 transition-colors"
+                >
+                  <span
+                    class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-emerald-400"
+                  ></span>
+                  <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-sm font-semibold text-zinc-100">
+                      Web Developer Intern
+                    </h3>
+                    <span class="text-xs text-zinc-500">Sep – Des 2025</span>
+                  </div>
+                  <p class="text-xs text-emerald-400 font-medium mb-1.5">
+                    PT Air Consulting Group
+                  </p>
+                  <p class="text-xs text-zinc-400 leading-relaxed">
+                    Membangun sistem support customer service dengan integrasi
+                    Artificial Intelligence untuk deteksi risiko pembayaran dan
+                    analisis sentimen.
+                  </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div
+                  class="relative pl-5 border-l-2 border-zinc-800 hover:border-emerald-500 transition-colors"
+                >
+                  <span
+                    class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-zinc-600"
+                  ></span>
+                  <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-sm font-semibold text-zinc-100">
+                      Trainer Coding
+                    </h3>
+                    <span class="text-xs text-zinc-500">2025</span>
+                  </div>
+                  <p class="text-xs text-emerald-400 font-medium mb-1.5">
+                    AfterSchola
+                  </p>
+                  <p class="text-xs text-zinc-400 leading-relaxed">
+                    Mengajar dasar pemrograman dan computational thinking
+                    menggunakan Scratch serta pembuatan proyek interaktif.
+                  </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div
+                  class="relative pl-5 border-l-2 border-zinc-800 hover:border-emerald-500 transition-colors"
+                >
+                  <span
+                    class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-zinc-600"
+                  ></span>
+                  <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-sm font-semibold text-zinc-100">
+                      Studi Independen MSIB Batch 7
+                    </h3>
+                    <span class="text-xs text-zinc-500">Sep – Des 2024</span>
+                  </div>
+                  <p class="text-xs text-emerald-400 font-medium mb-1.5">
+                    Bisa AI Academy
+                  </p>
+                  <p class="text-xs text-zinc-400 leading-relaxed">
+                    Program intensif Cyber Security, Cloud Computing, Fullstack
+                    Web, DevOps, dan Internet of Things (IoT).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Pengalaman Organisasi -->
+        <div
+          class="mt-8 bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-7 shadow-xl"
+        >
+          <div
+            class="flex items-center gap-3 border-b border-zinc-800 pb-4 mb-6"
+          >
+            <div
+              class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </div>
+            <h2 class="text-xl font-bold text-white tracking-tight">
+              Pengalaman Organisasi & Kepemimpinan
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              class="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800/70"
+            >
+              <span class="text-xs text-zinc-500 font-semibold"
+                >2020 – 2021</span
+              >
+              <h3 class="text-sm font-bold text-zinc-100 mt-1">Ketua Umum</h3>
+              <p class="text-xs text-emerald-400 mt-0.5">Paskibra</p>
+            </div>
+
+            <div
+              class="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800/70"
+            >
+              <span class="text-xs text-zinc-500 font-semibold"
+                >2019 – 2020</span
+              >
+              <h3 class="text-sm font-bold text-zinc-100 mt-1">
+                Ketua Angkatan
+              </h3>
+              <p class="text-xs text-emerald-400 mt-0.5">Paskibra</p>
+            </div>
+
+            <div
+              class="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800/70"
+            >
+              <span class="text-xs text-zinc-500 font-semibold"
+                >2019 – 2020</span
+              >
+              <h3 class="text-sm font-bold text-zinc-100 mt-1">Anggota MPK</h3>
+              <p class="text-xs text-emerald-400 mt-0.5">
+                SMA PGRI 31 Pangalengan
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-gray-900 text-center py-6 text-green-400">
-      © 2026 Regi Ridwan. All rights reserved.
+    <!-- Footer Clean -->
+    <footer
+      class="border-t border-zinc-800/60 bg-zinc-950/50 py-8 text-center text-xs text-zinc-500"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <p>© 2026 Regi Ridwan Gunawan. All rights reserved.</p>
+      </div>
     </footer>
+
+    <!-- JavaScript Mobile Menu Logic -->
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const hamburgerIcon = document.getElementById("hamburgerIcon");
+      const closeIcon = document.getElementById("closeIcon");
+
+      if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = !mobileMenu.classList.contains("hidden");
+          if (isOpen) {
+            mobileMenu.classList.add("hidden");
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          } else {
+            mobileMenu.classList.remove("hidden");
+            hamburgerIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
+          }
+        });
+      }
+    </script>
   </body>
 </html>

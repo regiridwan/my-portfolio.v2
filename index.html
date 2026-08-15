@@ -1,543 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio - Home</title>
+    <title>Regi Ridwan — Portfolio</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-black text-green-400">
-    <!-- Header -->
-    <header class="p-4 bg-gray-900 shadow-md flex justify-between items-center">
-      <h1 class="text-xl font-bold text-green-400">Regi Ridwan</h1>
-      <nav>
-        <a href="index.html" class="mx-2 hover:text-green-500">Home</a>
-        <a href="about.html" class="mx-2 hover:text-green-500">About</a>
-        <a href="portfolio.html" class="mx-2 hover:text-green-500">Portfolio</a>
-        <a href="certificates.html" class="mx-2 hover:text-green-500"
-          >Sertifikat</a
-        >
-        <a href="contact.html" class="mx-2 hover:text-green-500">Contact</a>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-      <section
-        class="relative bg-gradient-to-r from-black via-green-950 to-black py-32 px-6 overflow-hidden"
-      >
-        <div
-          class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12"
-        >
-          <!-- Teks kiri -->
-          <div class="text-center lg:text-left lg:w-1/2 space-y-6">
-            <span
-              class="inline-block bg-green-700 text-black px-4 py-1 rounded-full font-semibold text-sm"
-            >
-              IT Student
-            </span>
-
-            <h1 class="text-5xl font-bold text-green-400">
-              REGI RIDWAN <span class="text-white">GUNAWAN</span>
-            </h1>
-
-            <p class="text-white text-lg leading-relaxed">
-              Halo, saya Regi Ridwan. Seorang mahasiswa Teknik Informatika yang
-              memiliki ketertarikan dalam
-              <span class="font-semibold text-green-400"
-                >pengembangan perangkat lunak, desain web,</span
-              >
-              dan
-              <span class="font-semibold text-green-400">teknologi terbaru</span
-              >. Portofolio ini saya buat sebagai media untuk menampilkan hasil
-              karya, pengalaman, serta perjalanan saya di dunia IT.
-            </p>
-
-            <div class="flex justify-center lg:justify-start gap-4 mt-4">
-              <!-- Download CV -->
-              <a
-                href="files/CV REGI RIDWAN GUNAWAN.pdf"
-                class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-400 transition"
-                download
-              >
-                Download CV
-              </a>
-            </div>
-          </div>
-
-          <!-- Foto kanan -->
-          <div class="lg:w-1/2 flex justify-center lg:justify-end">
-            <img
-              src="images/regi2.png"
-              alt="Profile Photo"
-              class="w-96 h-96 object-cover rounded-full shadow-2xl"
-            />
-          </div>
-        </div>
-
-        <!-- ====== Sertifikat ====== -->
-        <div class="max-w-6xl mx-auto mt-16">
-          <h3 class="text-2xl font-bold text-green-400 mb-6 text-center">
-            Sertifikat
-          </h3>
-          <div class="marquee marquee-ltr">
-            <div class="marquee-track">
-              <!-- Sertifikat -->
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/CyberSAFECBS-410.jpg"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal('images/certificates/CyberSAFECBS-410.jpg')
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/SERTIFIKAT MSIB.jpg"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="openModal('images/certificates/SERTIFIKAT MSIB.jpg')"
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Sertifikat_Bisa Ai.jpg"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal('images/certificates/Sertifikat_Bisa Ai.jpg')
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Pelatihan Modern Ent-to-End Deep Learning Deplopmen and deploymen in Clude Producrion.jpg"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal(
-                      'images/certificates/Pelatihan Modern Ent-to-End Deep Learning Deplopmen and deploymen in Clude Producrion.jpg',
-                    )
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Bahasa-Pemrograman-Go.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal('images/certificates/Bahasa-Pemrograman-Go.png')
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Basic Cyber Scurity.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal('images/certificates/Basic Cyber Scurity.png')
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Cloud-Computing.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="openModal('images/certificates/Cloud-Computing.png')"
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Cyber Scurity.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="openModal('images/certificates/Cyber Scurity.png')"
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Dasar Codeigniter 3.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal('images/certificates/Dasar Codeigniter 3.png')
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Dasar Dasar ReactJS.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal('images/certificates/Dasar Dasar ReactJS.png')
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Dasar Internet Of Things dan pengamanannya.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal(
-                      'images/certificates/Dasar Internet Of Things dan pengamanannya.png',
-                    )
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Dasar-Dasar-Python.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal('images/certificates/Dasar-Dasar-Python.png')
-                  "
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Deeplearning.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="openModal('images/certificates/Deeplearning.png')"
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/DevOps Backend .png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="openModal('images/certificates/DevOps Backend .png')"
-                />
-              </div>
-
-              <div
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Sertifikat
-                </div>
-                <img
-                  src="images/certificates/Information Retrieval for Biginer.png"
-                  class="h-24 w-full object-cover cursor-pointer hover:scale-105 transition"
-                  onclick="
-                    openModal(
-                      'images/certificates/Information Retrieval for Biginer.png',
-                    )
-                  "
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ====== Portofolio ====== -->
-        <div class="max-w-6xl mx-auto mt-10 mb-10">
-          <h3 class="text-2xl font-bold text-green-400 mb-6 text-center">
-            Portofolio
-          </h3>
-          <div class="marquee marquee-rtl">
-            <div class="marquee-track">
-              <!-- Project -->
-              <a
-                href="https://bisa.ai/portofolio/detail/NTY5MQ"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/fondasi.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-
-              <a
-                href="https://bisa.ai/portofolio/detail/NTkxOQ"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/rajaongkir.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-
-              <a
-                href="https://bisa.ai/portofolio/detail/NjA0Ng"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/flood.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-
-              <a
-                href="https://bisa.ai/portofolio/detail/NjQ3OA"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/door.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-
-              <a
-                href="https://bisa.ai/portofolio/detail/NjM5Ng"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/prediksi.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-
-              <a
-                href="https://bisa.ai/portofolio/detail/NjM2Ng"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/mahasiswa.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-
-              <a
-                href="https://bisa.ai/portofolio/detail/NjI4Mg"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/farming.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-
-              <a
-                href="https://bisa.ai/portofolio/detail/NTg1Ng"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/siber.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-
-              <a
-                href="https://bisa.ai/portofolio/detail/NTg3Mw"
-                target="_blank"
-                class="bg-black/40 rounded-lg overflow-hidden border border-green-600 shadow-lg min-w-[150px]"
-              >
-                <div
-                  class="bg-green-600 text-black text-sm font-semibold text-center py-1"
-                >
-                  Project
-                </div>
-                <img
-                  src="images/portfolio/reactjs.png"
-                  class="h-24 w-full object-cover hover:scale-105 transition"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Modal sertifikat -->
-      <div
-        id="imageModal"
-        class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-      >
-        <span
-          class="absolute top-4 right-6 text-white text-3xl cursor-pointer"
-          onclick="closeModal()"
-          >&times;</span
-        >
-        <img
-          id="modalImage"
-          src=""
-          class="max-h-[80%] max-w-[90%] rounded shadow-lg"
-        />
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-center py-6 text-green-400">
-      © 2026 Regi Ridwan. All rights reserved.
-    </footer>
-
-    <!-- Styles -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["'Plus Jakarta Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
     <style>
+      /* Marquee Smooth Styles */
       .marquee {
         position: relative;
         display: flex;
         overflow: hidden;
-        gap: 1rem;
+        gap: 1.25rem;
         mask-image: linear-gradient(
           90deg,
           transparent,
-          #000 6%,
-          #000 94%,
+          rgba(0, 0, 0, 1) 8%,
+          rgba(0, 0, 0, 1) 92%,
           transparent
         );
       }
       .marquee-track {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 1.25rem;
         flex-shrink: 0;
         min-width: 100%;
-        animation: marquee-x var(--dur, 40s) linear infinite;
+        animation: marquee-x 45s linear infinite;
       }
       .marquee-rtl .marquee-track {
         animation-direction: normal;
@@ -557,17 +65,573 @@
         }
       }
     </style>
+  </head>
+  <body
+    class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-400"
+  >
+    <!-- Ambient Background Glow -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+      <div
+        class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px]"
+      ></div>
+      <div
+        class="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-teal-600/5 rounded-full blur-[130px]"
+      ></div>
+    </div>
+
+    <!-- Header / Navbar with Mobile Hamburger -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
+      >
+        <!-- Brand / Logo -->
+        <a
+          href="index.html"
+          class="text-lg font-bold tracking-tight text-white flex items-center gap-2"
+        >
+          <span
+            class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"
+          ></span>
+          Regi Ridwan<span class="text-emerald-400">.</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-400"
+        >
+          <a
+            href="index.html"
+            class="text-white hover:text-emerald-400 transition-colors"
+            >Home</a
+          >
+          <a href="about.html" class="hover:text-emerald-400 transition-colors"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="hover:text-emerald-400 transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="certificates.html"
+            class="hover:text-emerald-400 transition-colors"
+            >Sertifikat</a
+          >
+          <a
+            href="contact.html"
+            class="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-emerald-500/40 text-zinc-200 hover:text-white transition-all"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          id="menuToggle"
+          aria-label="Toggle Mobile Menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 focus:outline-none transition-all"
+        >
+          <!-- Hamburger Icon -->
+          <svg
+            id="hamburgerIcon"
+            class="w-5 h-5 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+          <!-- Close Icon (Hidden by default) -->
+          <svg
+            id="closeIcon"
+            class="w-5 h-5 hidden transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-zinc-800/80 bg-zinc-950/95 backdrop-blur-xl px-6 py-5 transition-all duration-300"
+      >
+        <nav
+          class="flex flex-col space-y-3.5 text-sm font-medium text-zinc-300"
+        >
+          <a
+            href="index.html"
+            class="px-3 py-2 rounded-lg bg-zinc-900/60 text-emerald-400 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Portfolio</a
+          >
+          <a
+            href="certificates.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Sertifikat</a
+          >
+          <a
+            href="contact.html"
+            class="px-3 py-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold text-center hover:bg-emerald-500 hover:text-zinc-950 transition-all mt-2"
+          >
+            Hubungi Saya
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 md:py-24">
+      <section class="max-w-6xl mx-auto px-6">
+        <!-- Hero Grid -->
+        <div
+          class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16"
+        >
+          <!-- Teks Kiri -->
+          <div class="text-center lg:text-left lg:w-3/5 space-y-6">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              Fresh Graduate • B.S. in Computer Science
+            </div>
+
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight"
+            >
+              Hi, I'm Regi Ridwan <br />
+              <span
+                class="bg-gradient-to-r from-emerald-400 via-teal-300 to-white bg-clip-text text-transparent"
+                >Gunawan</span
+              >
+            </h1>
+
+            <p
+              class="text-zinc-400 text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
+            >
+              Lulusan baru S1 Teknik Informatika yang berdedikasi dan memiliki
+              spesialisasi dalam
+              <span class="text-zinc-100 font-medium"
+                >software engineering, pengembangan web modern</span
+              >, serta
+              <span class="text-zinc-100 font-medium"
+                >integrasi teknologi terkini</span
+              >. Berkomitmen menciptakan solusi digital yang efisien, skalabel,
+              dan bernilai guna tinggi.
+            </p>
+
+            <div
+              class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2"
+            >
+              <!-- Download CV -->
+              <a
+                href="files/CV REGI RIDWAN GUNAWAN.pdf"
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-200"
+                download
+              >
+                <span>Download CV</span>
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+              </a>
+
+              <!-- Contact Button -->
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white font-medium transition-all duration-200"
+              >
+                <span>Hubungi Saya</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Foto Kanan with Modern Frame -->
+          <div class="lg:w-2/5 flex justify-center">
+            <div class="relative group">
+              <!-- Glow behind profile -->
+              <div
+                class="absolute -inset-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500"
+              ></div>
+              <div
+                class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 p-2 shadow-2xl"
+              >
+                <img
+                  src="images/regi2.png"
+                  alt="Regi Ridwan Gunawan"
+                  class="w-full h-full object-cover rounded-xl grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====== Section Sertifikat ====== -->
+        <div class="mt-28">
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <p
+                class="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1"
+              >
+                Kredensial & Pembelajaran
+              </p>
+              <h2
+                class="text-2xl md:text-3xl font-bold text-white tracking-tight"
+              >
+                Sertifikasi Profesional
+              </h2>
+            </div>
+            <a
+              href="certificates.html"
+              class="text-sm font-medium text-zinc-400 hover:text-emerald-400 transition"
+              >Lihat Semua →</a
+            >
+          </div>
+
+          <div class="marquee marquee-ltr py-2">
+            <div class="marquee-track">
+              <!-- Item Sertifikat -->
+              <div
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow-lg group"
+                onclick="openModal('images/certificates/CyberSAFECBS-410.jpg')"
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950">
+                  <img
+                    src="images/certificates/CyberSAFECBS-410.jpg"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    CyberSAFE CBS-410
+                  </p>
+                  <p class="text-[11px] text-zinc-500">
+                    Sertifikasi Keamanan Siber
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow-lg group"
+                onclick="openModal('images/certificates/SERTIFIKAT MSIB.jpg')"
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950">
+                  <img
+                    src="images/certificates/SERTIFIKAT MSIB.jpg"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    Studi Independen MSIB
+                  </p>
+                  <p class="text-[11px] text-zinc-500">Program Kemendikbud</p>
+                </div>
+              </div>
+
+              <div
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow-lg group"
+                onclick="
+                  openModal('images/certificates/Sertifikat_Bisa Ai.jpg')
+                "
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950">
+                  <img
+                    src="images/certificates/Sertifikat_Bisa Ai.jpg"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    AI & Deep Learning Course
+                  </p>
+                  <p class="text-[11px] text-zinc-500">BISA AI Academy</p>
+                </div>
+              </div>
+
+              <div
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow-lg group"
+                onclick="
+                  openModal('images/certificates/Bahasa-Pemrograman-Go.png')
+                "
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950">
+                  <img
+                    src="images/certificates/Bahasa-Pemrograman-Go.png"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    Pemrograman Go Language
+                  </p>
+                  <p class="text-[11px] text-zinc-500">Backend Development</p>
+                </div>
+              </div>
+
+              <div
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow-lg group"
+                onclick="openModal('images/certificates/Cloud-Computing.png')"
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950">
+                  <img
+                    src="images/certificates/Cloud-Computing.png"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    Cloud Computing Fundamentals
+                  </p>
+                  <p class="text-[11px] text-zinc-500">Cloud Infrastructure</p>
+                </div>
+              </div>
+
+              <div
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow-lg group"
+                onclick="
+                  openModal('images/certificates/Dasar-Dasar-Python.png')
+                "
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950">
+                  <img
+                    src="images/certificates/Dasar-Dasar-Python.png"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    Python Programming Basics
+                  </p>
+                  <p class="text-[11px] text-zinc-500">Data & Automation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====== Section Portofolio ====== -->
+        <div class="mt-20">
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <p
+                class="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1"
+              >
+                Karya Unggulan
+              </p>
+              <h2
+                class="text-2xl md:text-3xl font-bold text-white tracking-tight"
+              >
+                Proyek Pilihan
+              </h2>
+            </div>
+            <a
+              href="portfolio.html"
+              class="text-sm font-medium text-zinc-400 hover:text-emerald-400 transition"
+              >Jelajahi Portofolio →</a
+            >
+          </div>
+
+          <div class="marquee marquee-rtl py-2">
+            <div class="marquee-track">
+              <!-- Item Portofolio Card -->
+              <a
+                href="https://bisa.ai/portofolio/detail/NTY5MQ"
+                target="_blank"
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 shadow-lg group block"
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950 relative">
+                  <img
+                    src="images/portfolio/fondasi.png"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                  <span
+                    class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                    >Live Project</span
+                  >
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    Sistem Fondasi
+                  </p>
+                  <p class="text-[11px] text-zinc-500">Web Application</p>
+                </div>
+              </a>
+
+              <a
+                href="https://bisa.ai/portofolio/detail/NTkxOQ"
+                target="_blank"
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 shadow-lg group block"
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950 relative">
+                  <img
+                    src="images/portfolio/rajaongkir.png"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                  <span
+                    class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                    >API Integration</span
+                  >
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    Integrasi RajaOngkir
+                  </p>
+                  <p class="text-[11px] text-zinc-500">
+                    Logistics & E-Commerce
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="https://bisa.ai/portofolio/detail/NjA0Ng"
+                target="_blank"
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 shadow-lg group block"
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950 relative">
+                  <img
+                    src="images/portfolio/flood.png"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                  <span
+                    class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                    >IoT System</span
+                  >
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    Early Flood Detection
+                  </p>
+                  <p class="text-[11px] text-zinc-500">Hardware & Telemetry</p>
+                </div>
+              </a>
+
+              <a
+                href="https://bisa.ai/portofolio/detail/NjQ3OA"
+                target="_blank"
+                class="w-64 bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/80 hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300 shadow-lg group block"
+              >
+                <div class="h-36 overflow-hidden bg-zinc-950 relative">
+                  <img
+                    src="images/portfolio/door.png"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                  <span
+                    class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                    >Smart Device</span
+                  >
+                </div>
+                <div class="p-3 bg-zinc-900/90 border-t border-zinc-800/80">
+                  <p class="text-xs font-semibold text-zinc-200 truncate">
+                    Smart Door Lock
+                  </p>
+                  <p class="text-[11px] text-zinc-500">
+                    Security & Microcontroller
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal Preview Sertifikat -->
+      <div
+        id="imageModal"
+        class="hidden fixed inset-0 bg-black/85 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all"
+      >
+        <button
+          class="absolute top-5 right-6 text-zinc-400 hover:text-white text-3xl font-light transition"
+          onclick="closeModal()"
+        >
+          ✕
+        </button>
+        <img
+          id="modalImage"
+          src=""
+          class="max-h-[85vh] max-w-[90vw] rounded-xl shadow-2xl border border-zinc-800"
+        />
+      </div>
+    </main>
+
+    <!-- Footer Clean -->
+    <footer
+      class="border-t border-zinc-800/60 bg-zinc-950/50 py-8 text-center text-xs text-zinc-500"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <p>© 2026 Regi Ridwan Gunawan. All rights reserved.</p>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script>
+      // Mobile Navbar Toggle Logic
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const hamburgerIcon = document.getElementById("hamburgerIcon");
+      const closeIcon = document.getElementById("closeIcon");
+
+      if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = !mobileMenu.classList.contains("hidden");
+          if (isOpen) {
+            mobileMenu.classList.add("hidden");
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          } else {
+            mobileMenu.classList.remove("hidden");
+            hamburgerIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
+          }
+        });
+      }
+
+      // Modal Functions
       function openModal(src) {
         const img = document.getElementById("modalImage");
         const modal = document.getElementById("imageModal");
         img.src = src;
         modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
       }
       function closeModal() {
-        document.getElementById("imageModal").classList.add("hidden");
+        const modal = document.getElementById("imageModal");
+        modal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
       }
       document.getElementById("imageModal").addEventListener("click", (e) => {
         if (e.target.id === "imageModal") closeModal();

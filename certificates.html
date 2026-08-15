@@ -1,131 +1,425 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Certificates</title>
+    <title>Certificates — Regi Ridwan Gunawan</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["'Plus Jakarta Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="bg-black text-green-400">
-    <header class="p-4 bg-gray-900 shadow-md flex justify-between items-center">
-      <h1 class="text-xl font-bold text-green-400">Regi Ridwan</h1>
-      <nav>
-        <a href="index.html" class="mx-2 hover:text-green-500">Home</a>
-        <a href="about.html" class="mx-2 hover:text-green-500">About</a>
-        <a href="portfolio.html" class="mx-2 hover:text-green-500">Portfolio</a>
-        <a href="certificates.html" class="mx-2 hover:text-green-500"
-          >Sertifikat</a
+  <body
+    class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-400"
+  >
+    <!-- Ambient Background Glow -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+      <div
+        class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px]"
+      ></div>
+      <div
+        class="absolute top-[45%] left-[-10%] w-[500px] h-[500px] bg-teal-600/5 rounded-full blur-[130px]"
+      ></div>
+    </div>
+
+    <!-- Header / Navbar with Mobile Hamburger -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
+      >
+        <!-- Brand / Logo -->
+        <a
+          href="index.html"
+          class="text-lg font-bold tracking-tight text-white flex items-center gap-2"
         >
-        <a href="contact.html" class="mx-2 hover:text-green-500">Contact</a>
-      </nav>
+          <span
+            class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"
+          ></span>
+          Regi Ridwan<span class="text-emerald-400">.</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-400"
+        >
+          <a href="index.html" class="hover:text-emerald-400 transition-colors"
+            >Home</a
+          >
+          <a href="about.html" class="hover:text-emerald-400 transition-colors"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="hover:text-emerald-400 transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="certificates.html"
+            class="text-white hover:text-emerald-400 transition-colors"
+            >Sertifikat</a
+          >
+          <a
+            href="contact.html"
+            class="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-emerald-500/40 text-zinc-200 hover:text-white transition-all"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          id="menuToggle"
+          aria-label="Toggle Mobile Menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 focus:outline-none transition-all"
+        >
+          <!-- Hamburger Icon -->
+          <svg
+            id="hamburgerIcon"
+            class="w-5 h-5 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+          <!-- Close Icon (Hidden by default) -->
+          <svg
+            id="closeIcon"
+            class="w-5 h-5 hidden transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-zinc-800/80 bg-zinc-950/95 backdrop-blur-xl px-6 py-5 transition-all duration-300"
+      >
+        <nav
+          class="flex flex-col space-y-3.5 text-sm font-medium text-zinc-300"
+        >
+          <a
+            href="index.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Portfolio</a
+          >
+          <a
+            href="certificates.html"
+            class="px-3 py-2 rounded-lg bg-zinc-900/60 text-emerald-400 transition-all"
+            >Sertifikat</a
+          >
+          <a
+            href="contact.html"
+            class="px-3 py-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold text-center hover:bg-emerald-500 hover:text-zinc-950 transition-all mt-2"
+          >
+            Hubungi Saya
+          </a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section class="bg-black py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="text-4xl font-bold text-green-400 mb-12 text-center">
-            Sertifikat Saya
-          </h2>
-
+    <!-- Main Content -->
+    <main class="py-16 md:py-20">
+      <section class="max-w-6xl mx-auto px-6">
+        <!-- Header Section -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div
-            class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-20"
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider"
           >
-            <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
-              onclick="
-                openModal('images/certificates/KP.jpg', 'Magang Web Developer')
-              "
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            Verified Credentials
+          </div>
+          <h1
+            class="text-3xl md:text-5xl font-extrabold text-white tracking-tight"
+          >
+            Sertifikasi &
+            <span
+              class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent"
+              >Pelatihan</span
             >
-              <img
-                src="images/certificates/KP.jpg"
-                alt="Magang Web Developer"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Magang Web Developer
-              </h3>
-            </div>
+          </h1>
+          <p class="text-zinc-400 text-base md:text-lg leading-relaxed pt-2">
+            Dokumentasi sertifikasi resmi, program magang industri, dan
+            pelatihan kompetensi teknis yang telah saya selesaikan.
+          </p>
+        </div>
 
+        <!-- Section 1: Sertifikasi Utama & Magang -->
+        <div class="mb-16">
+          <div class="flex items-center gap-3 mb-8">
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
-              onclick="
-                openModal(
-                  'images/certificates/CyberSAFECBS-410.jpg',
-                  'CyberSAFE CBS-410',
-                )
-              "
+              class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"
             >
-              <img
-                src="images/certificates/CyberSAFECBS-410.jpg"
-                alt="CyberSAFE CBS-410"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                CyberSAFE CBS-410
-              </h3>
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                />
+              </svg>
             </div>
-
-            <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
-              onclick="
-                openModal('images/certificates/SERTIFIKAT MSIB.jpg', 'MSIB')
-              "
-            >
-              <img
-                src="images/certificates/SERTIFIKAT MSIB.jpg"
-                alt="MSIB"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                MSIB
-              </h3>
-            </div>
-
-            <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
-              onclick="
-                openModal(
-                  'images/certificates/Sertifikat_Bisa Ai.jpg',
-                  'Bisa AI',
-                )
-              "
-            >
-              <img
-                src="images/certificates/Sertifikat_Bisa Ai.jpg"
-                alt="Bisa AI"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Bisa AI
-              </h3>
-            </div>
-
-            <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
-              onclick="
-                openModal(
-                  'images/certificates/Pelatihan Modern Ent-to-End Deep Learning Deplopmen and deploymen in Clude Producrion.jpg',
-                  'Pelatihan Deep Learning',
-                )
-              "
-            >
-              <img
-                src="images/certificates/Pelatihan Modern Ent-to-End Deep Learning Deplopmen and deploymen in Clude Producrion.jpg"
-                alt="Pelatihan Deep Learning"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Pelatihan Deep Learning
-              </h3>
+            <div>
+              <h2 class="text-xl font-bold text-white tracking-tight">
+                Sertifikasi Profesional & Magang
+              </h2>
+              <p class="text-xs text-zinc-500">
+                Program industri dan sertifikasi internasional
+              </p>
             </div>
           </div>
 
-          <h2 class="text-4xl font-bold text-green-400 mb-12 text-center">
-            Sertifikat Course
-          </h2>
-          <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          >
+            <!-- Item 1: KP -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/KP.jpg',
+                  'Sertifikat Magang Web Developer – PT Air Consulting Group',
+                )
+              "
+            >
+              <div class="h-44 overflow-hidden bg-zinc-950 relative">
+                <img
+                  src="images/certificates/KP.jpg"
+                  alt="Magang Web Developer"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <span
+                  class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                  >Internship</span
+                >
+              </div>
+              <div class="p-4 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-sm font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Magang Web Developer
+                </h3>
+                <p class="text-[11px] text-zinc-500 mt-0.5">
+                  PT Air Consulting Group
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2: CyberSAFE -->
+            <div
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/CyberSAFECBS-410.jpg',
+                  'Sertifikasi CyberSAFE CBS-410',
+                )
+              "
+            >
+              <div class="h-44 overflow-hidden bg-zinc-950 relative">
+                <img
+                  src="images/certificates/CyberSAFECBS-410.jpg"
+                  alt="CyberSAFE CBS-410"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <span
+                  class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                  >International</span
+                >
+              </div>
+              <div class="p-4 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-sm font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  CyberSAFE CBS-410
+                </h3>
+                <p class="text-[11px] text-zinc-500 mt-0.5">
+                  CertNexus Credential
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 3: MSIB -->
+            <div
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/SERTIFIKAT MSIB.jpg',
+                  'Sertifikat Studi Independen Bersertifikat (MSIB)',
+                )
+              "
+            >
+              <div class="h-44 overflow-hidden bg-zinc-950 relative">
+                <img
+                  src="images/certificates/SERTIFIKAT MSIB.jpg"
+                  alt="MSIB"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <span
+                  class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                  >Kemendikbud</span
+                >
+              </div>
+              <div class="p-4 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-sm font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Studi Independen MSIB
+                </h3>
+                <p class="text-[11px] text-zinc-500 mt-0.5">
+                  Kampus Merdeka Batch 7
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 4: Bisa AI -->
+            <div
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Sertifikat_Bisa Ai.jpg',
+                  'Sertifikat Akademi BISA AI',
+                )
+              "
+            >
+              <div class="h-44 overflow-hidden bg-zinc-950 relative">
+                <img
+                  src="images/certificates/Sertifikat_Bisa Ai.jpg"
+                  alt="Bisa AI"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <span
+                  class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                  >Course</span
+                >
+              </div>
+              <div class="p-4 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-sm font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Akademi BISA AI
+                </h3>
+                <p class="text-[11px] text-zinc-500 mt-0.5">BISA AI Academy</p>
+              </div>
+            </div>
+
+            <!-- Item 5: Pelatihan Deep Learning -->
+            <div
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/Pelatihan Modern Ent-to-End Deep Learning Deplopmen and deploymen in Clude Producrion.jpg',
+                  'Pelatihan End-to-End Deep Learning Deployment',
+                )
+              "
+            >
+              <div class="h-44 overflow-hidden bg-zinc-950 relative">
+                <img
+                  src="images/certificates/Pelatihan Modern Ent-to-End Deep Learning Deplopmen and deploymen in Clude Producrion.jpg"
+                  alt="Pelatihan Deep Learning"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <span
+                  class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 rounded text-[10px] font-semibold text-emerald-400"
+                  >Cloud AI</span
+                >
+              </div>
+              <div class="p-4 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-sm font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Deep Learning Deployment
+                </h3>
+                <p class="text-[11px] text-zinc-500 mt-0.5">
+                  Cloud Production Training
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Sertifikat Course & Workshop -->
+        <div>
+          <div class="flex items-center gap-3 mb-8">
+            <div
+              class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-white tracking-tight">
+                Sertifikat Kursus & Keahlian
+              </h2>
+              <p class="text-xs text-zinc-500">
+                Keterampilan teknis dan modul pembelajaran terapan
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          >
+            <!-- Course: Go -->
+            <div
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Bahasa-Pemrograman-Go.png',
@@ -133,18 +427,28 @@
                 )
               "
             >
-              <img
-                src="images/certificates/Bahasa-Pemrograman-Go.png"
-                alt="Bahasa Pemrograman Go"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Bahasa Pemrograman Go
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Bahasa-Pemrograman-Go.png"
+                  alt="Bahasa Pemrograman Go"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Bahasa Pemrograman Go
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  Backend Development
+                </p>
+              </div>
             </div>
 
+            <!-- Course: Basic Cyber Security -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Basic Cyber Scurity.png',
@@ -152,18 +456,28 @@
                 )
               "
             >
-              <img
-                src="images/certificates/Basic Cyber Scurity.png"
-                alt="Basic Cyber Security"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Basic Cyber Security
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Basic Cyber Scurity.png"
+                  alt="Basic Cyber Security"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Basic Cyber Security
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  Security Fundamental
+                </p>
+              </div>
             </div>
 
+            <!-- Course: Cloud Computing -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Cloud-Computing.png',
@@ -171,18 +485,28 @@
                 )
               "
             >
-              <img
-                src="images/certificates/Cloud-Computing.png"
-                alt="Cloud Computing"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Cloud Computing
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Cloud-Computing.png"
+                  alt="Cloud Computing"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Cloud Computing
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  Cloud Architecture
+                </p>
+              </div>
             </div>
 
+            <!-- Course: Cyber Security -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Cyber Scurity.png',
@@ -190,18 +514,28 @@
                 )
               "
             >
-              <img
-                src="images/certificates/Cyber Scurity.png"
-                alt="Cyber Security"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Cyber Security
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Cyber Scurity.png"
+                  alt="Cyber Security"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Cyber Security
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  Threats & Defense
+                </p>
+              </div>
             </div>
 
+            <!-- Course: CodeIgniter 3 -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Dasar Codeigniter 3.png',
@@ -209,94 +543,140 @@
                 )
               "
             >
-              <img
-                src="images/certificates/Dasar Codeigniter 3.png"
-                alt="Dasar Codeigniter 3"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Dasar Codeigniter 3
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Dasar Codeigniter 3.png"
+                  alt="Dasar Codeigniter 3"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Dasar CodeIgniter 3
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">PHP Framework</p>
+              </div>
             </div>
 
+            <!-- Course: ReactJS -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Dasar Dasar ReactJS.png',
-                  'Dasar ReactJS',
+                  'Dasar Dasar ReactJS',
                 )
               "
             >
-              <img
-                src="images/certificates/Dasar Dasar ReactJS.png"
-                alt="Dasar ReactJS"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Dasar ReactJS
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Dasar Dasar ReactJS.png"
+                  alt="Dasar Dasar ReactJS"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Dasar-Dasar ReactJS
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">Frontend Library</p>
+              </div>
             </div>
 
+            <!-- Course: IoT -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Dasar Internet Of Things dan pengamanannya.png',
-                  'Dasar IoT dan Pengamanan',
+                  'Dasar Internet Of Things dan Pengamanannya',
                 )
               "
             >
-              <img
-                src="images/certificates/Dasar Internet Of Things dan pengamanannya.png"
-                alt="Dasar IoT"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Dasar IoT & Pengamanan
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Dasar Internet Of Things dan pengamanannya.png"
+                  alt="Dasar IoT"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Dasar IoT & Pengamanan
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  Embedded Hardware
+                </p>
+              </div>
             </div>
 
+            <!-- Course: Python -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Dasar-Dasar-Python.png',
-                  'Dasar Python',
+                  'Dasar-Dasar Python',
                 )
               "
             >
-              <img
-                src="images/certificates/Dasar-Dasar-Python.png"
-                alt="Dasar Python"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Dasar Python
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Dasar-Dasar-Python.png"
+                  alt="Dasar-Dasar Python"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Dasar-Dasar Python
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  Automation & Scripting
+                </p>
+              </div>
             </div>
 
+            <!-- Course: Deep Learning -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Deeplearning.png',
-                  'Deep Learning',
+                  'Deep Learning Fundamental',
                 )
               "
             >
-              <img
-                src="images/certificates/Deeplearning.png"
-                alt="Deep Learning"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Deep Learning
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Deeplearning.png"
+                  alt="Deep Learning"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Deep Learning
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  Neural Networks & AI
+                </p>
+              </div>
             </div>
 
+            <!-- Course: DevOps Backend -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/DevOps Backend .png',
@@ -304,18 +684,28 @@
                 )
               "
             >
-              <img
-                src="images/certificates/DevOps Backend .png"
-                alt="DevOps Backend"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                DevOps Backend
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/DevOps Backend .png"
+                  alt="DevOps Backend"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  DevOps Backend
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  CI/CD & Server Management
+                </p>
+              </div>
             </div>
 
+            <!-- Course: Information Retrieval -->
             <div
-              class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-2xl transition cursor-pointer"
+              class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 hover:border-emerald-500/50 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               onclick="
                 openModal(
                   'images/certificates/Information Retrieval for Biginer.png',
@@ -323,59 +713,109 @@
                 )
               "
             >
-              <img
-                src="images/certificates/Information Retrieval for Biginer.png"
-                alt="Information Retrieval"
-                class="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 class="text-lg font-semibold text-green-400 text-center">
-                Information Retrieval
-              </h3>
+              <div class="h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src="images/certificates/Information Retrieval for Biginer.png"
+                  alt="Information Retrieval"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div class="p-3.5 bg-zinc-900/90 border-t border-zinc-800/80">
+                <h3
+                  class="text-xs font-semibold text-zinc-100 group-hover:text-emerald-400 transition-colors truncate"
+                >
+                  Information Retrieval
+                </h3>
+                <p class="text-[10px] text-zinc-500 mt-0.5">
+                  Search & Indexing Logic
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Modal Preview Sertifikat -->
     <div
       id="imageModal"
-      class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+      class="hidden fixed inset-0 bg-black/85 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all"
     >
-      <div class="relative">
+      <div class="relative max-w-4xl w-full flex flex-col items-center">
         <button
           onclick="closeModal()"
-          class="absolute top-2 right-2 text-white text-3xl font-bold"
+          class="absolute -top-12 right-0 md:-right-4 text-zinc-400 hover:text-white text-3xl font-light transition"
         >
-          &times;
+          ✕
         </button>
         <img
           id="modalImage"
           src=""
           alt=""
-          class="max-h-[80vh] max-w-[90vw] rounded-lg shadow-2xl"
+          class="max-h-[80vh] max-w-full rounded-xl shadow-2xl border border-zinc-800 bg-zinc-950 object-contain"
         />
-        <p id="modalTitle" class="text-center text-green-400 mt-4 text-lg"></p>
+        <p
+          id="modalTitle"
+          class="text-center text-sm md:text-base font-semibold text-zinc-200 mt-4 bg-zinc-900/90 px-4 py-1.5 rounded-full border border-zinc-800"
+        ></p>
       </div>
     </div>
 
-    <footer class="bg-gray-900 text-center py-6 text-green-400">
-      © 2026 Regi Ridwan. All rights reserved.
+    <!-- Footer Clean -->
+    <footer
+      class="border-t border-zinc-800/60 bg-zinc-950/50 py-8 text-center text-xs text-zinc-500"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <p>© 2026 Regi Ridwan Gunawan. All rights reserved.</p>
+      </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
+      // Mobile Navbar Toggle Logic
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const hamburgerIcon = document.getElementById("hamburgerIcon");
+      const closeIcon = document.getElementById("closeIcon");
+
+      if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = !mobileMenu.classList.contains("hidden");
+          if (isOpen) {
+            mobileMenu.classList.add("hidden");
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          } else {
+            mobileMenu.classList.remove("hidden");
+            hamburgerIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
+          }
+        });
+      }
+
+      // Modal Functions
       function openModal(src, title) {
+        const modal = document.getElementById("imageModal");
         document.getElementById("modalImage").src = src;
         document.getElementById("modalTitle").innerText = title;
-        document.getElementById("imageModal").classList.remove("hidden");
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
       }
       function closeModal() {
-        document.getElementById("imageModal").classList.add("hidden");
+        const modal = document.getElementById("imageModal");
+        modal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
       }
       document
         .getElementById("imageModal")
         .addEventListener("click", function (e) {
           if (e.target === this) closeModal();
         });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
     </script>
   </body>
 </html>
