@@ -28,6 +28,40 @@
   <body
     class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-400"
   >
+    <!-- Welcome Splash Popup Screen (3 Seconds with Perfect Circle Logo & Spinning Ring) -->
+    <div
+      id="welcomeSplash"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-[#09090b] transition-opacity duration-700 ease-out"
+    >
+      <div class="relative flex items-center justify-center p-6">
+        <!-- Outer Ambient Glow Ring -->
+        <div
+          class="absolute -inset-8 rounded-full bg-emerald-500/15 blur-2xl animate-pulse"
+        ></div>
+
+        <!-- Spinning Professional Circular Loading Border Ring -->
+        <div
+          class="absolute -inset-3 rounded-full border-2 border-dashed border-emerald-500/40 animate-spin"
+          style="animation-duration: 8s"
+        ></div>
+        <div
+          class="absolute -inset-1 rounded-full border-2 border-t-emerald-400 border-r-transparent border-b-teal-500 border-l-transparent animate-spin"
+          style="animation-duration: 2s"
+        ></div>
+
+        <!-- Perfect Circular Responsive Logo Container with Object Cover & Center Crop -->
+        <div
+          class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full bg-zinc-950/90 border-2 border-emerald-500/40 flex items-center justify-center p-2 shadow-2xl backdrop-blur-md overflow-hidden"
+        >
+          <img
+            src="images/welcome.png"
+            alt="Welcome Logo"
+            class="w-full h-full object-cover rounded-full drop-shadow-lg animate-pulse"
+          />
+        </div>
+      </div>
+    </div>
+
     <!-- Ambient Background Glow -->
     <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
       <div
@@ -40,20 +74,22 @@
 
     <!-- Header / Navbar with Mobile Hamburger -->
     <header
-      class="sticky top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
+      class="sticky top-0 z-40 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
     >
       <div
         class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
       >
-        <!-- Brand / Logo -->
+        <!-- Brand / Logo with Image (Plong, No Border/Box, Larger Size) -->
         <a
           href="index.html"
-          class="text-lg font-bold tracking-tight text-white flex items-center gap-2"
+          class="text-lg font-bold tracking-tight text-white flex items-center gap-3 group"
         >
-          <span
-            class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"
-          ></span>
-          Regi Ridwan<span class="text-emerald-400">.</span>
+          <img
+            src="images/logonav.png"
+            alt="Logo Regi Ridwan"
+            class="w-10 h-10 object-contain transition-transform group-hover:scale-105"
+          />
+          <span>Regi Ridwan<span class="text-emerald-400">.</span></span>
         </a>
 
         <!-- Desktop Navigation -->
@@ -335,8 +371,22 @@
       </div>
     </footer>
 
-    <!-- JavaScript Mobile Menu Logic -->
+    <!-- JavaScript Mobile Menu Logic & Welcome Splash Screen -->
     <script>
+      // Welcome Splash Screen Logic (3 Seconds Timeout with Smooth Fade-out)
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const splash = document.getElementById("welcomeSplash");
+          if (splash) {
+            splash.style.opacity = "0";
+            setTimeout(() => {
+              splash.style.display = "none";
+            }, 700); // Matches transition duration
+          }
+        }, 3000);
+      });
+
+      // Mobile Navbar Toggle Logic
       const menuToggle = document.getElementById("menuToggle");
       const mobileMenu = document.getElementById("mobileMenu");
       const hamburgerIcon = document.getElementById("hamburgerIcon");
