@@ -28,7 +28,7 @@
   <body
     class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-400"
   >
-    <!-- Welcome Splash Popup Screen (3 Seconds with Perfect Circle Logo & Spinning Ring) -->
+    <!-- Welcome Splash Popup Screen -->
     <div
       id="welcomeSplash"
       class="fixed inset-0 z-50 flex items-center justify-center bg-[#09090b] transition-opacity duration-700 ease-out"
@@ -49,7 +49,7 @@
           style="animation-duration: 2s"
         ></div>
 
-        <!-- Perfect Circular Responsive Logo Container with Object Cover & Center Crop -->
+        <!-- Perfect Circular Responsive Logo Container -->
         <div
           class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full bg-zinc-950/90 border-2 border-emerald-500/40 flex items-center justify-center p-2 shadow-2xl backdrop-blur-md overflow-hidden"
         >
@@ -79,7 +79,7 @@
       <div
         class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
       >
-        <!-- Brand / Logo with Image (Plong, No Border/Box, Larger Size) -->
+        <!-- Brand / Logo -->
         <a
           href="index.html"
           class="text-lg font-bold tracking-tight text-white flex items-center gap-3 group"
@@ -130,7 +130,6 @@
           aria-label="Toggle Mobile Menu"
           class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 focus:outline-none transition-all"
         >
-          <!-- Hamburger Icon -->
           <svg
             id="hamburgerIcon"
             class="w-5 h-5 transition-transform"
@@ -145,7 +144,6 @@
               d="M4 6h16M4 12h16m-7 6h7"
             />
           </svg>
-          <!-- Close Icon (Hidden by default) -->
           <svg
             id="closeIcon"
             class="w-5 h-5 hidden transition-transform"
@@ -187,13 +185,18 @@
             >Portfolio</a
           >
           <a
+            href="achievements.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Achievements</a
+          >
+          <a
             href="certificates.html"
             class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
             >Sertifikat</a
           >
           <a
             href="contact.html"
-            class="px-3 py-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold text-center hover:bg-emerald-500 hover:text-zinc-950 transition-all mt-2"
+            class="px-3 py-2.5 rounded-lg bg-zinc-900/60 text-emerald-400 font-semibold text-center transition-all mt-2"
           >
             Contact
           </a>
@@ -223,7 +226,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Email Card -->
+          <!-- Email Card (Disesuaikan dengan CV) -->
           <a
             href="mailto:regiridwan220@gmail.com"
             class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-6 flex items-center gap-5 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all duration-300"
@@ -253,9 +256,10 @@
             </div>
           </a>
 
-          <!-- Phone Card -->
+          <!-- Phone Card (Disesuaikan dengan CV) -->
           <a
-            href="tel:081230046693"
+            href="https://wa.me/6281230046693"
+            target="_blank"
             class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-6 flex items-center gap-5 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all duration-300"
           >
             <div
@@ -276,9 +280,11 @@
               </svg>
             </div>
             <div>
-              <h2 class="text-white font-semibold text-base">Phone</h2>
+              <h2 class="text-white font-semibold text-base">
+                Phone / WhatsApp
+              </h2>
               <p class="text-emerald-400 text-sm group-hover:underline">
-                0812 3004 6693
+                081230046693
               </p>
             </div>
           </a>
@@ -318,8 +324,9 @@
 
           <!-- LinkedIn Card -->
           <a
-            href="https://www.linkedin.com/in/regi-ridwan-gunawan"
+            href="https://linkedin.com/in/regi-ridwan-gunawan"
             target="_blank"
+            rel="noopener noreferrer"
             class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-6 flex items-center gap-5 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all duration-300"
           >
             <div
@@ -343,6 +350,7 @@
           <a
             href="https://instagram.com/giw.luxx"
             target="_blank"
+            rel="noopener noreferrer"
             class="group bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-6 flex items-center gap-5 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all duration-300 md:col-span-2"
           >
             <div
@@ -357,7 +365,7 @@
             <div>
               <h2 class="text-white font-semibold text-base">Instagram</h2>
               <p class="text-emerald-400 text-sm group-hover:underline">
-                @__giw04
+                @giw.luxx
               </p>
             </div>
           </a>
@@ -378,7 +386,7 @@
 
     <!-- JavaScript Mobile Menu Logic & Welcome Splash Screen -->
     <script>
-      // Welcome Splash Screen Logic (3 Seconds Timeout with Smooth Fade-out)
+      // Welcome Splash Screen Logic
       window.addEventListener("load", () => {
         setTimeout(() => {
           const splash = document.getElementById("welcomeSplash");
@@ -386,7 +394,7 @@
             splash.style.opacity = "0";
             setTimeout(() => {
               splash.style.display = "none";
-            }, 700); // Matches transition duration
+            }, 700);
           }
         }, 3000);
       });
