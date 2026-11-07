@@ -3,7 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====== SEO Meta Tags (Agar Masuk Google) ====== -->
     <title>Certificates — Regi Ridwan Gunawan</title>
+    <meta name="title" content="Certificates — Regi Ridwan Gunawan" />
+    <meta
+      name="description"
+      content="Daftar sertifikasi profesional, kredensial internasional CyberSAFE, pelatihan K3 Umum, program MSIB Kampus Merdeka, dan kursus teknologi Regi Ridwan Gunawan."
+    />
+    <meta
+      name="keywords"
+      content="Sertifikat Regi Ridwan Gunawan, CyberSAFE CBS-410, K3 Umum PORKESRA, MSIB Kampus Merdeka, Sertifikasi Software Engineering"
+    />
+    <meta name="author" content="Regi Ridwan Gunawan" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social Media Preview Card -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://myportofolioregi.netlify.app/certificates.html"
+    />
+    <meta property="og:title" content="Certificates — Regi Ridwan Gunawan" />
+    <meta
+      property="og:description"
+      content="Kumpulan sertifikat resmi, lisensi teknis, dan kredensial profesional Regi Ridwan Gunawan."
+    />
+    <meta
+      property="og:image"
+      content="https://myportofolioregi.netlify.app/images/welcome.png"
+    />
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,7 +104,7 @@
       class="sticky top-0 z-40 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
     >
       <div
-        class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
+        class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center relative"
       >
         <!-- Brand / Logo -->
         <a
@@ -121,41 +151,74 @@
           >
         </nav>
 
-        <!-- Mobile Hamburger Button -->
-        <button
-          id="menuToggle"
-          aria-label="Toggle Mobile Menu"
-          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 focus:outline-none transition-all"
-        >
-          <svg
-            id="hamburgerIcon"
-            class="w-5 h-5 transition-transform"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+        <!-- Container Mobile Button + Red Attention Hint -->
+        <div class="flex items-center gap-2.5 md:hidden relative">
+          <!-- Petunjuk Merah Mencolok dengan Ping Effect -->
+          <div
+            id="mobileMenuHint"
+            class="relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-600 text-white text-xs font-bold shadow-lg shadow-red-600/40 animate-pulse transition-all duration-500"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-          <svg
-            id="closeIcon"
-            class="w-5 h-5 hidden transition-transform"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-white"
+              ></span>
+            </span>
+            <span>Pilihan Menu</span>
+            <svg
+              class="w-4 h-4 animate-bounce"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              style="animation-direction: alternate"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </div>
+
+          <!-- Mobile Hamburger Button -->
+          <button
+            id="menuToggle"
+            aria-label="Toggle Mobile Menu"
+            class="flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-red-500/50 text-white hover:border-red-500 focus:outline-none transition-all shadow-md shadow-red-500/10"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+            <svg
+              id="hamburgerIcon"
+              class="w-5 h-5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+            <svg
+              id="closeIcon"
+              class="w-5 h-5 hidden transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <!-- Mobile Dropdown Menu -->
@@ -184,7 +247,7 @@
           <a
             href="achievements.html"
             class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
-            >Pencapaian</a
+            >Achievements</a
           >
           <a
             href="certificates.html"
@@ -448,7 +511,7 @@
           </div>
         </div>
 
-        <!-- NEW SECTION: Sertifikat Bahasa -->
+        <!-- SECTION: Sertifikat Bahasa -->
         <div class="mb-16">
           <div class="flex items-center gap-3 mb-8">
             <div
@@ -1029,6 +1092,7 @@
 
     <!-- Scripts -->
     <script>
+      // Splash screen logic
       window.addEventListener("load", () => {
         setTimeout(() => {
           const splash = document.getElementById("welcomeSplash");
@@ -1041,14 +1105,25 @@
         }, 3000);
       });
 
+      // Mobile Navbar Toggle Logic & Auto-dismiss Hint
       const menuToggle = document.getElementById("menuToggle");
       const mobileMenu = document.getElementById("mobileMenu");
       const hamburgerIcon = document.getElementById("hamburgerIcon");
       const closeIcon = document.getElementById("closeIcon");
+      const mobileMenuHint = document.getElementById("mobileMenuHint");
 
       if (mobileMenu && menuToggle) {
         menuToggle.addEventListener("click", () => {
           const isOpen = !mobileMenu.classList.contains("hidden");
+
+          // Sembunyikan hint merah saat tombol hamburger diklik
+          if (mobileMenuHint) {
+            mobileMenuHint.style.opacity = "0";
+            setTimeout(() => {
+              mobileMenuHint.style.display = "none";
+            }, 300);
+          }
+
           if (isOpen) {
             mobileMenu.classList.add("hidden");
             hamburgerIcon.classList.remove("hidden");

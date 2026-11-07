@@ -3,7 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Regi Ridwan — Portfolio</title>
+
+    <!-- ====== SEO Meta Tags (Agar Masuk Google) ====== -->
+    <title>Regi Ridwan Gunawan — Portfolio & Software Engineer</title>
+    <meta
+      name="title"
+      content="Regi Ridwan Gunawan — Portfolio & Software Engineer"
+    />
+    <meta
+      name="description"
+      content="Portofolio resmi Regi Ridwan Gunawan, lulusan S1 Teknik Informatika spesialisasi Software Engineering, Web Development, dan IoT."
+    />
+    <meta
+      name="keywords"
+      content="Regi Ridwan Gunawan, Regi Ridwan, Portofolio Regi Ridwan, Software Engineer Bandung, Teknik Informatika"
+    />
+    <meta name="author" content="Regi Ridwan Gunawan" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social Media Preview Card -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://myportofolioregi.netlify.app/" />
+    <meta property="og:title" content="Regi Ridwan Gunawan — Portfolio" />
+    <meta
+      property="og:description"
+      content="Portofolio resmi Regi Ridwan Gunawan, lulusan S1 Teknik Informatika spesialisasi Software Engineering, Web Development, dan IoT."
+    />
+    <meta
+      property="og:image"
+      content="https://myportofolioregi.netlify.app/images/welcome.png"
+    />
+
+    <!-- Google Search Console Verification Tag (Ganti 'kode-verifikasi-google' sesuai kode dari Google Search Console) -->
+    <meta
+      name="google-site-verification"
+      content="dX418iOSQePUCAeneVkrV2yT6DxfrH-r8I1JhQz3epg"
+    />
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -69,7 +105,7 @@
   <body
     class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-400"
   >
-    <!-- Welcome Splash Popup Screen (3 Seconds with Perfect Circle Logo & Spinning Ring) -->
+    <!-- Welcome Splash Popup Screen -->
     <div
       id="welcomeSplash"
       class="fixed inset-0 z-50 flex items-center justify-center bg-[#09090b] transition-opacity duration-700 ease-out"
@@ -118,9 +154,9 @@
       class="sticky top-0 z-40 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
     >
       <div
-        class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
+        class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center relative"
       >
-        <!-- Brand / Logo with Image (Plong, No Border/Box, Larger Size) -->
+        <!-- Brand / Logo -->
         <a
           href="index.html"
           class="text-lg font-bold tracking-tight text-white flex items-center gap-3 group"
@@ -167,43 +203,77 @@
           >
         </nav>
 
-        <!-- Mobile Hamburger Button -->
-        <button
-          id="menuToggle"
-          aria-label="Toggle Mobile Menu"
-          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 focus:outline-none transition-all"
-        >
-          <!-- Hamburger Icon -->
-          <svg
-            id="hamburgerIcon"
-            class="w-5 h-5 transition-transform"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+        <!-- Container Mobile Button + Red Attention Hint -->
+        <div class="flex items-center gap-2.5 md:hidden relative">
+          <!-- Petunjuk Merah Mencolok dengan Ping Effect -->
+          <div
+            id="mobileMenuHint"
+            class="relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-600 text-white text-xs font-bold shadow-lg shadow-red-600/40 animate-pulse transition-all duration-500"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-          <!-- Close Icon (Hidden by default) -->
-          <svg
-            id="closeIcon"
-            class="w-5 h-5 hidden transition-transform"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+            <!-- Dot animasi ping di sebelah teks -->
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-white"
+              ></span>
+            </span>
+            <span>Pilihan Menu</span>
+            <svg
+              class="w-4 h-4 animate-bounce"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              style="animation-direction: alternate"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </div>
+
+          <!-- Mobile Hamburger Button -->
+          <button
+            id="menuToggle"
+            aria-label="Toggle Mobile Menu"
+            class="flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-red-500/50 text-white hover:border-red-500 focus:outline-none transition-all shadow-md shadow-red-500/10"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+            <!-- Hamburger Icon -->
+            <svg
+              id="hamburgerIcon"
+              class="w-5 h-5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+            <!-- Close Icon (Hidden by default) -->
+            <svg
+              id="closeIcon"
+              class="w-5 h-5 hidden transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <!-- Mobile Dropdown Menu -->
@@ -645,7 +715,7 @@
 
     <!-- Scripts -->
     <script>
-      // Welcome Splash Screen Logic (3 Seconds Timeout with Smooth Fade-out)
+      // Welcome Splash Screen Logic
       window.addEventListener("load", () => {
         setTimeout(() => {
           const splash = document.getElementById("welcomeSplash");
@@ -653,20 +723,30 @@
             splash.style.opacity = "0";
             setTimeout(() => {
               splash.style.display = "none";
-            }, 700); // Matches transition duration
+            }, 700);
           }
         }, 3000);
       });
 
-      // Mobile Navbar Toggle Logic
+      // Mobile Navbar Toggle Logic & Auto-dismiss Hint
       const menuToggle = document.getElementById("menuToggle");
       const mobileMenu = document.getElementById("mobileMenu");
       const hamburgerIcon = document.getElementById("hamburgerIcon");
       const closeIcon = document.getElementById("closeIcon");
+      const mobileMenuHint = document.getElementById("mobileMenuHint");
 
       if (menuToggle) {
         menuToggle.addEventListener("click", () => {
           const isOpen = !mobileMenu.classList.contains("hidden");
+
+          // Hilangkan hint merah begitu tombol diklik
+          if (mobileMenuHint) {
+            mobileMenuHint.style.opacity = "0";
+            setTimeout(() => {
+              mobileMenuHint.style.display = "none";
+            }, 300);
+          }
+
           if (isOpen) {
             mobileMenu.classList.add("hidden");
             hamburgerIcon.classList.remove("hidden");
