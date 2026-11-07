@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achievements — Regi Ridwan Gunawan</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["'Plus Jakarta Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-400"
+  >
+    <!-- Welcome Splash Popup Screen -->
+    <div
+      id="welcomeSplash"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-[#09090b] transition-opacity duration-700 ease-out"
+    >
+      <div class="relative flex items-center justify-center p-6">
+        <div
+          class="absolute -inset-8 rounded-full bg-emerald-500/15 blur-2xl animate-pulse"
+        ></div>
+
+        <div
+          class="absolute -inset-3 rounded-full border-2 border-dashed border-emerald-500/40 animate-spin"
+          style="animation-duration: 8s"
+        ></div>
+        <div
+          class="absolute -inset-1 rounded-full border-2 border-t-emerald-400 border-r-transparent border-b-teal-500 border-l-transparent animate-spin"
+          style="animation-duration: 2s"
+        ></div>
+
+        <div
+          class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full bg-zinc-950/90 border-2 border-emerald-500/40 flex items-center justify-center p-2 shadow-2xl backdrop-blur-md overflow-hidden"
+        >
+          <img
+            src="images/welcome.png"
+            alt="Welcome Logo"
+            class="w-full h-full object-cover rounded-full drop-shadow-lg animate-pulse"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Ambient Background Glow -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+      <div
+        class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px]"
+      ></div>
+      <div
+        class="absolute top-[45%] left-[-10%] w-[500px] h-[500px] bg-teal-600/5 rounded-full blur-[130px]"
+      ></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header
+      class="sticky top-0 z-40 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
+      >
+        <!-- Brand / Logo -->
+        <a
+          href="index.html"
+          class="text-lg font-bold tracking-tight text-white flex items-center gap-3 group"
+        >
+          <img
+            src="images/logonav.png"
+            alt="Logo Regi Ridwan"
+            class="w-10 h-10 object-contain transition-transform group-hover:scale-105"
+          />
+          <span>Regi Ridwan<span class="text-emerald-400">.</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-400"
+        >
+          <a href="index.html" class="hover:text-emerald-400 transition-colors"
+            >Home</a
+          >
+          <a href="about.html" class="hover:text-emerald-400 transition-colors"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="hover:text-emerald-400 transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="achievements.html"
+            class="text-white hover:text-emerald-400 transition-colors"
+            >Achievements</a
+          >
+          <a
+            href="certificates.html"
+            class="hover:text-emerald-400 transition-colors"
+            >Sertifikat</a
+          >
+          <a
+            href="contact.html"
+            class="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-emerald-500/40 text-zinc-200 hover:text-white transition-all"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          id="menuToggle"
+          aria-label="Toggle Mobile Menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 focus:outline-none transition-all"
+        >
+          <svg
+            id="hamburgerIcon"
+            class="w-5 h-5 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+          <svg
+            id="closeIcon"
+            class="w-5 h-5 hidden transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-zinc-800/80 bg-zinc-950/95 backdrop-blur-xl px-6 py-5 transition-all duration-300"
+      >
+        <nav
+          class="flex flex-col space-y-3.5 text-sm font-medium text-zinc-300"
+        >
+          <a
+            href="index.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Portfolio</a
+          >
+          <a
+            href="achievements.html"
+            class="px-3 py-2 rounded-lg bg-zinc-900/60 text-emerald-400 transition-all"
+            >Achievements</a
+          >
+          <a
+            href="certificates.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Sertifikat</a
+          >
+          <a
+            href="contact.html"
+            class="px-3 py-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold text-center hover:bg-emerald-500 hover:text-zinc-950 transition-all mt-2"
+          >
+            Hubungi Saya
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 md:py-20">
+      <section class="max-w-6xl mx-auto px-6">
+        <!-- Header Section -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            Professional Milestones
+          </div>
+          <h1
+            class="text-3xl md:text-5xl font-extrabold text-white tracking-tight"
+          >
+            Honors &
+            <span
+              class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent"
+              >Achievements</span
+            >
+          </h1>
+          <p class="text-zinc-400 text-base md:text-lg leading-relaxed pt-2">
+            Dokumentasi kontribusi akademis, publikasi jurnal ilmiah
+            terakreditasi, dan pengalaman saya sebagai pembicara pada webinar
+            teknologi.
+          </p>
+        </div>
+
+        <!-- Section 1: Public Speaking & Keynote Speaker -->
+        <div class="mb-16">
+          <div class="flex items-center gap-3 mb-8">
+            <div
+              class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.15)]"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-white tracking-tight">
+                Public Speaking & Webinars
+              </h2>
+              <p class="text-xs text-zinc-500">
+                Pengalaman berbagi wawasan sebagai narasumber dan pembicara
+                webinar
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Speaker Item 1: Webinar BISA AI (Transformasi Digital) -->
+            <div
+              class="group bg-gradient-to-b from-emerald-950/20 via-zinc-900/90 to-zinc-950 border border-emerald-500/30 hover:border-emerald-400/60 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div class="h-52 overflow-hidden bg-zinc-950 relative">
+                  <img
+                    src="https://img.youtube.com/vi/MZaAHcp5L-k/maxresdefault.jpg"
+                    alt="Transformasi Digital Webinar Speaker"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <span
+                    class="absolute top-3 right-3 px-3 py-1 bg-emerald-500 text-zinc-950 text-xs font-bold rounded-full shadow-md"
+                    >Keynote Speaker</span
+                  >
+                </div>
+                <div class="p-6">
+                  <span
+                    class="text-xs text-emerald-400 font-semibold uppercase tracking-wider"
+                    >Webinar Tech Event</span
+                  >
+                  <h3
+                    class="text-lg font-bold text-white mt-1 group-hover:text-emerald-300 transition-colors"
+                  >
+                    Transformasi Digital: Menavigasi Peluang dan Tantangan di
+                    Era Modern
+                  </h3>
+                  <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                    Membawakan pemaparan komprehensif mengenai integrasi
+                    teknologi digital, efisiensi kecerdasan buatan (AI),
+                    tantangan keamanan data, hingga pergeseran tren karir di era
+                    modern.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <div
+                  class="pt-4 border-t border-zinc-800/60 flex items-center justify-between"
+                >
+                  <div class="text-[11px] text-zinc-500">
+                    <p class="font-medium text-zinc-400">BISA AI Academy</p>
+                    <p>11 Februari 2025</p>
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=MZaAHcp5L-k"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-zinc-950 text-xs font-semibold transition-all"
+                  >
+                    <svg
+                      class="w-3.5 h-3.5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                      />
+                    </svg>
+                    Watch Webinar →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Speaker Item 2: Webinar BISA AI (Digital Privacy & Cyber Security) -->
+            <div
+              class="group bg-gradient-to-b from-emerald-950/20 via-zinc-900/90 to-zinc-950 border border-emerald-500/30 hover:border-emerald-400/60 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div class="h-52 overflow-hidden bg-zinc-950 relative">
+                  <img
+                    src="https://img.youtube.com/vi/cfKlPC9WYCI/maxresdefault.jpg"
+                    alt="Digital Privacy Webinar Speaker"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <span
+                    class="absolute top-3 right-3 px-3 py-1 bg-emerald-500 text-zinc-950 text-xs font-bold rounded-full shadow-md"
+                    >Keynote Speaker</span
+                  >
+                </div>
+                <div class="p-6">
+                  <span
+                    class="text-xs text-emerald-400 font-semibold uppercase tracking-wider"
+                    >Cyber Security Event</span
+                  >
+                  <h3
+                    class="text-lg font-bold text-white mt-1 group-hover:text-emerald-300 transition-colors"
+                  >
+                    Digital Privacy in the Modern Age: Memperkuat Keamanan Sandi
+                  </h3>
+                  <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                    Membahas strategi krusial soft skill dan hard skill dalam
+                    dunia cyber security, pentingnya komunikasi risiko teknis,
+                    penanganan insiden, serta teknik manajemen keamanan
+                    kredensial.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <div
+                  class="pt-4 border-t border-zinc-800/60 flex items-center justify-between"
+                >
+                  <div class="text-[11px] text-zinc-500">
+                    <p class="font-medium text-zinc-400">BISA AI Academy</p>
+                    <p>19 Desember 2024</p>
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=cfKlPC9WYCI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-zinc-950 text-xs font-semibold transition-all"
+                  >
+                    <svg
+                      class="w-3.5 h-3.5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                      />
+                    </svg>
+                    Watch Webinar →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Academic Publications & Thesis -->
+        <div>
+          <div class="flex items-center gap-3 mb-8">
+            <div
+              class="w-8 h-8 rounded-lg bg-teal-500/15 border border-teal-500/40 flex items-center justify-center text-teal-400 shadow-[0_0_15px_rgba(20,184,166,0.15)]"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-white tracking-tight">
+                Academic Publications & Thesis
+              </h2>
+              <p class="text-xs text-zinc-500">
+                Riset ilmiah terpublikasi dan tugas akhir akademik
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Academic Item 1: Jurnal Ilmiah (Garuda) -->
+            <div
+              class="bg-zinc-900/80 border border-zinc-800/90 hover:border-teal-500/40 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-2.5 py-1 bg-teal-500/10 border border-teal-500/30 text-teal-400 text-[11px] font-semibold rounded-md"
+                  >
+                    Scientific Publication (Garuda)
+                  </span>
+                  <span class="text-xs text-zinc-500">25 Juli 2025</span>
+                </div>
+                <h3 class="text-base font-bold text-white leading-snug">
+                  Optimalisasi Tri Pusat Pendidikan dalam Meningkatkan Literasi,
+                  Inklusivitas dan Karakter Anak di Desa Narawita Kabupaten
+                  Bandung
+                </h3>
+                <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                  Penelitian kegiatan pengabdian masyarakat (KKN) yang memuat
+                  strategi efektivitas pendidikan inklusif, bimbingan belajar
+                  (Bimbara), dan seminar pencegahan perundungan (Sawala
+                  Narawita).
+                </p>
+                <div class="mt-3 text-[11px] text-zinc-500">
+                  <span class="text-zinc-400 font-medium">Penulis:</span>
+                  Syayidah Nuriyah, Ririn Nuraeni,
+                  <strong class="text-teal-400 font-semibold"
+                    >Regi Ridwan Gunawan</strong
+                  >, Gian Ahdiningtias, Kurniawan.
+                </div>
+              </div>
+              <div
+                class="mt-5 pt-4 border-t border-zinc-800/80 flex items-center justify-between"
+              >
+                <span class="text-xs text-zinc-500"
+                  >Jurnal Pengabdian Kepada Masyarakat (Vol 15 No 1)</span
+                >
+                <a
+                  href="https://garuda.kemdiktisaintek.go.id/documents/detail/5301010"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-xs text-teal-400 font-semibold hover:text-teal-300 transition-colors"
+                >
+                  Read Journal (Garuda) →
+                </a>
+              </div>
+            </div>
+
+            <!-- Academic Item 2: Skripsi / Thesis (Repository UNINUS) -->
+            <div
+              class="bg-zinc-900/80 border border-zinc-800/90 hover:border-emerald-500/40 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px] font-semibold rounded-md"
+                  >
+                    Bachelor's Thesis (S1)
+                  </span>
+                  <span class="text-xs text-zinc-500">2026</span>
+                </div>
+                <h3
+                  class="text-base font-bold text-white leading-snug uppercase"
+                >
+                  Rancang Bangun Wearable Armband IoT Berbasis Website untuk
+                  Analisis Biofeedback Menggunakan Metode Prototyping di Bomber
+                  Gym
+                </h3>
+                <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                  Penelitian tugas akhir S1 Teknik Informatika mengenai
+                  pengembangan perangkat keras pintar (IoT armband) yang
+                  terintegrasi dengan platform web untuk memantau data
+                  biofeedback secara real-time.
+                </p>
+                <div class="mt-3 text-[11px] text-zinc-500">
+                  <span class="text-zinc-400 font-medium">Penulis:</span>
+                  <strong class="text-emerald-400 font-semibold"
+                    >Regi Ridwan Gunawan</strong
+                  >
+                </div>
+              </div>
+              <div
+                class="mt-5 pt-4 border-t border-zinc-800/80 flex items-center justify-between"
+              >
+                <span class="text-xs text-zinc-500"
+                  >Universitas Islam Nusantara</span
+                >
+                <a
+                  href="https://repository.uninus.ac.id/1462/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-semibold hover:text-emerald-300 transition-colors"
+                >
+                  Repository UNINUS →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Clean -->
+    <footer
+      class="border-t border-zinc-800/60 bg-zinc-950/50 py-8 text-center text-xs text-zinc-500"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <p>© 2026 Regi Ridwan Gunawan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Splash screen logic
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const splash = document.getElementById("welcomeSplash");
+          if (splash) {
+            splash.style.opacity = "0";
+            setTimeout(() => {
+              splash.style.display = "none";
+            }, 700);
+          }
+        }, 3000);
+      });
+
+      // Mobile Navbar Toggle Logic
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const hamburgerIcon = document.getElementById("hamburgerIcon");
+      const closeIcon = document.getElementById("closeIcon");
+
+      if (mobileMenu && menuToggle) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = !mobileMenu.classList.contains("hidden");
+          if (isOpen) {
+            mobileMenu.classList.add("hidden");
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          } else {
+            mobileMenu.classList.remove("hidden");
+            hamburgerIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

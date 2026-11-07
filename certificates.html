@@ -28,18 +28,16 @@
   <body
     class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-400"
   >
-    <!-- Welcome Splash Popup Screen (3 Seconds with Perfect Circle Logo & Spinning Ring) -->
+    <!-- Welcome Splash Popup Screen -->
     <div
       id="welcomeSplash"
       class="fixed inset-0 z-50 flex items-center justify-center bg-[#09090b] transition-opacity duration-700 ease-out"
     >
       <div class="relative flex items-center justify-center p-6">
-        <!-- Outer Ambient Glow Ring -->
         <div
           class="absolute -inset-8 rounded-full bg-emerald-500/15 blur-2xl animate-pulse"
         ></div>
 
-        <!-- Spinning Professional Circular Loading Border Ring -->
         <div
           class="absolute -inset-3 rounded-full border-2 border-dashed border-emerald-500/40 animate-spin"
           style="animation-duration: 8s"
@@ -49,7 +47,6 @@
           style="animation-duration: 2s"
         ></div>
 
-        <!-- Perfect Circular Responsive Logo Container with Object Cover & Center Crop -->
         <div
           class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full bg-zinc-950/90 border-2 border-emerald-500/40 flex items-center justify-center p-2 shadow-2xl backdrop-blur-md overflow-hidden"
         >
@@ -72,14 +69,14 @@
       ></div>
     </div>
 
-    <!-- Header / Navbar with Mobile Hamburger -->
+    <!-- Header / Navbar -->
     <header
       class="sticky top-0 z-40 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60 transition-all"
     >
       <div
         class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center"
       >
-        <!-- Brand / Logo with Image -->
+        <!-- Brand / Logo -->
         <a
           href="index.html"
           class="text-lg font-bold tracking-tight text-white flex items-center gap-3 group"
@@ -108,6 +105,11 @@
             >Portfolio</a
           >
           <a
+            href="achievements.html"
+            class="hover:text-emerald-400 transition-colors"
+            >Achievements</a
+          >
+          <a
             href="certificates.html"
             class="text-white hover:text-emerald-400 transition-colors"
             >Sertifikat</a
@@ -125,7 +127,6 @@
           aria-label="Toggle Mobile Menu"
           class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/40 focus:outline-none transition-all"
         >
-          <!-- Hamburger Icon -->
           <svg
             id="hamburgerIcon"
             class="w-5 h-5 transition-transform"
@@ -140,7 +141,6 @@
               d="M4 6h16M4 12h16m-7 6h7"
             />
           </svg>
-          <!-- Close Icon -->
           <svg
             id="closeIcon"
             class="w-5 h-5 hidden transition-transform"
@@ -182,6 +182,11 @@
             >Portfolio</a
           >
           <a
+            href="achievements.html"
+            class="px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-emerald-400 transition-all"
+            >Pencapaian</a
+          >
+          <a
             href="certificates.html"
             class="px-3 py-2 rounded-lg bg-zinc-900/60 text-emerald-400 transition-all"
             >Sertifikat</a
@@ -221,7 +226,6 @@
             pelatihan kompetensi teknis yang telah saya selesaikan.
           </p>
 
-          <!-- Tombol Download Keseluruhan PDF -->
           <div class="pt-4">
             <a
               href="files/sertifikat-regi-ridwan.pdf"
@@ -285,7 +289,7 @@
               onclick="
                 openModal(
                   'images/certificates/KP.jpg',
-                  'Sertifikat Magang Web Developer – PT Air Consulting Group',
+                  'Sertifikat Magang Web Developer - PT Air Consulting Group',
                 )
               "
             >
@@ -578,6 +582,39 @@
           <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
           >
+            <!-- Course: K3 & First Aid -->
+            <div
+              class="group bg-gradient-to-b from-emerald-950/30 via-zinc-900/90 to-zinc-950 border-2 border-emerald-500/60 hover:border-emerald-400 rounded-xl overflow-hidden shadow-[0_4px_30px_rgba(16,185,129,0.15)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+              onclick="
+                openModal(
+                  'images/certificates/k3.jpg',
+                  'Ahli K3 Umum & Pertolongan Pertama Pada Kecelakaan - PORKESRA',
+                )
+              "
+            >
+              <div class="h-40 overflow-hidden bg-zinc-950 relative">
+                <img
+                  src="images/certificates/k3.jpg"
+                  alt="Ahli K3 Umum dan First Aid"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <span
+                  class="absolute top-2.5 right-2.5 px-2.5 py-0.5 bg-emerald-500 text-zinc-950 rounded text-[10px] font-extrabold shadow-md tracking-wider uppercase"
+                  >Featured K3</span
+                >
+              </div>
+              <div class="p-3.5 bg-zinc-900/95 border-t border-emerald-500/30">
+                <h3
+                  class="text-xs font-bold text-emerald-300 group-hover:text-emerald-200 transition-colors truncate"
+                >
+                  Ahli K3 Umum & First Aid
+                </h3>
+                <p class="text-[10px] text-zinc-400 mt-0.5 font-medium">
+                  Pelopor K3 Nusantara (PORKESRA)
+                </p>
+              </div>
+            </div>
+
             <!-- Course: HP LIFE -->
             <div
               class="group bg-gradient-to-b from-cyan-950/30 via-zinc-900/90 to-zinc-950 border-2 border-cyan-500/60 hover:border-cyan-400 rounded-xl overflow-hidden shadow-[0_4px_30px_rgba(6,182,212,0.15)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
@@ -930,13 +967,12 @@
       </section>
     </main>
 
-    <!-- Modal Preview Sertifikat dengan Floating Download Button -->
+    <!-- Modal Preview Sertifikat -->
     <div
       id="imageModal"
       class="hidden fixed inset-0 bg-black/85 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all"
     >
       <div class="relative max-w-4xl w-full flex flex-col items-center">
-        <!-- Close Button -->
         <button
           onclick="closeModal()"
           class="absolute -top-12 right-0 md:-right-4 text-zinc-400 hover:text-white text-3xl font-light transition z-10"
@@ -944,7 +980,6 @@
           ✕
         </button>
 
-        <!-- Container Gambar dengan Floating Download Button Icon -->
         <div class="relative inline-block max-w-full">
           <img
             id="modalImage"
@@ -953,7 +988,6 @@
             class="max-h-[80vh] max-w-full rounded-xl shadow-2xl border border-zinc-800 bg-zinc-950 object-contain block mx-auto"
           />
 
-          <!-- Floating Download Button Icon (Direct Download via JS Fetch Blob) -->
           <button
             onclick="downloadCertificate(event)"
             title="Download Sertifikat Ini"
@@ -975,7 +1009,6 @@
           </button>
         </div>
 
-        <!-- Title Display -->
         <p
           id="modalTitle"
           class="text-center text-sm md:text-base font-semibold text-zinc-200 mt-4 bg-zinc-900/90 px-6 py-2 rounded-full border border-zinc-800"
@@ -996,7 +1029,6 @@
 
     <!-- Scripts -->
     <script>
-      // Welcome Splash Screen Logic (3 Seconds Timeout with Smooth Fade-out)
       window.addEventListener("load", () => {
         setTimeout(() => {
           const splash = document.getElementById("welcomeSplash");
@@ -1009,7 +1041,6 @@
         }, 3000);
       });
 
-      // Mobile Navbar Toggle Logic
       const menuToggle = document.getElementById("menuToggle");
       const mobileMenu = document.getElementById("mobileMenu");
       const hamburgerIcon = document.getElementById("hamburgerIcon");
@@ -1030,16 +1061,14 @@
         });
       }
 
-      // Variabel global untuk menyimpan path gambar aktif di modal
       let currentCertificateSrc = "";
 
-      // Modal Functions
       function openModal(src, title) {
         const modal = document.getElementById("imageModal");
         const modalImage = document.getElementById("modalImage");
         const modalTitle = document.getElementById("modalTitle");
 
-        currentCertificateSrc = src; // Simpan path gambar
+        currentCertificateSrc = src;
         modalImage.src = src;
         modalTitle.innerText = title;
 
@@ -1047,9 +1076,8 @@
         document.body.classList.add("overflow-hidden");
       }
 
-      // Fungsi Download Satuan Langsung Tersimpan ke Perangkat
       function downloadCertificate(event) {
-        event.stopPropagation(); // Mencegah event bubbling ke modal
+        event.stopPropagation();
         if (!currentCertificateSrc) return;
 
         const filename =
@@ -1068,7 +1096,6 @@
             window.URL.revokeObjectURL(blobUrl);
           })
           .catch((err) => {
-            // Fallback jika dibatasi CORS di local server
             const link = document.createElement("a");
             link.href = currentCertificateSrc;
             link.download = filename;
